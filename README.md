@@ -35,4 +35,15 @@
 ### Backend
 - **Firebase**: Real-time database, authentication, and cloud functions.
 
+📊 Screenshots
+Web Dashboard:
+![Screenshot 2024-11-14 155854](https://github.com/user-attachments/assets/d8dace31-8af8-4111-8e43-a1fb2ea31ab2)
+![Screenshot 2024-11-14 155921](https://github.com/user-attachments/assets/913855b4-b689-4429-b64b-bb846a452260)
+![Screenshot 2024-11-14 155936](https://github.com/user-attachments/assets/87b22fc9-a078-411b-9cf3-15046b01acf6)
 
+
+
+
+
+
+Mobile App:

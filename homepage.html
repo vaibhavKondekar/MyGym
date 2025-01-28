@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="homepage.css" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <!-- Ensure Chart.js is loaded -->
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="sidebar__header">Menu</h2>
+            <ul class="sidebar__menu">
+                <li class="menu__item active" data-section="dashboard">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </li>
+                <li class="menu__item" data-section="members">
+                    <i class="fas fa-users"></i> Members
+                </li>
+                <li class="menu__item" data-section="attendance">
+                    <i class="fas fa-calendar-check"></i> Attendance
+                </li>
+                <li class="menu__item" data-section="gym-atmosphere">
+                    <i class="fas fa-wind"></i> Gym Atmosphere
+                </li>
+                <li class="menu__item" data-section="health-report">
+                    <i class="fas fa-heart"></i> Health Report <!-- Changed icon to heart -->
+                </li>
+            </ul>
+        
+            <!-- Move the Logout button here -->
+            
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section id="dashboard">
+                <h2>Dashboard</h2>
+                <div class="dashboard-cards">
+                    <div class="card">
+                        <h3>Total Members</h3>
+                        <p>15 Members</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Trainers</h3>
+                        <p>5 Trainers</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Packages</h3>
+                        <p>3 Packages</p>
+                    </div>
+                </div>
+
+                
+                <!-- Live Crowd Section -->
+                <div class="live-crowd">
+                    <h3 class="crowd-title">Current Gym Crowd</h3>
+                    <div class="chart-container">
+                        <canvas id="liveCrowdChart"></canvas>
+                    </div>
+                    <p id="crowdCountText">Loading...</p>
+                </div>
+
+                <div class="chart-container" style="height: 400px; width: 600px;">
+                    <canvas id="myChart"></canvas>
+                </div>
+
+            </section>
+
+            <section id="members" style="display: none;">
+                <h2>Members Details</h2>
+                <button id="show-add-member-form" class="add-member-btn" type="button" onclick="window.location.href='add_member.html'">
+                    Add New Member
+                </button>
+                
+                <!-- Members Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Plan</th>
+                            <th>Join Date</th>
+                            <th>End Date</th>
+                            <th>Remaining Days</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="memberList">
+                        <!-- Members will be populated here from Firebase -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="attendance" style="display: none;">
+                <h2>Attendance Records</h2>
+                <div id="attendanceRecords"></div>
+            </section>
+
+            <section id="gym-atmosphere" style="display: block;"> <!-- Ensure this is visible -->
+                <h2>Gym Atmosphere</h2>
+                <p>Gym atmosphere information will be displayed here.</p>
+                <div  style="display: flex; justify-content: space-around;">
+                    <div class="chart-container-atmosphere">
+                        <h1>Oxygen Level</h1>
+                        <canvas id="oxygenPieChart" width="400" height="400"></canvas>
+                    </div>
+                    <div class="chart-container-atmosphere">
+                        <h1>CO2 Level</h1>
+                        <canvas id="co2PieChart" width="400" height="400"></canvas>
+                    </div>
+                    <div class="chart-container-atmosphere">
+                        <h1>Humidity Level</h1>
+                        <canvas id="humidityPieChart" width="400" height="400"></canvas>
+                    </div>
+                </div>
+            </section>
+            
+
+            <section id="health-report" style="display: none;">
+                <h2>Health Reports</h2>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Heart Rate (60-100 bpm)</th>
+                            <th>Blood Oxygen (95-100%)</th>
+                            <th>Blood Pressure (90/60 - 120/80 mmHg)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="healthReportsBody">
+                        <!-- Rows will be dynamically added -->
+                    </tbody>
+                </table>
+            </section>
+            
+        </main>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+
+    <!-- Custom JavaScript -->
+     
+    <script src="homepage.js"></script>
+    <script src="atmosphere.js"></script>
+    <script src="healthreport.js"></script>
+     <!-- Ensure this is included -->
+
+    <div id="messageArea" style="margin-top: 20px; color: green;"></div>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+/* Update the chart-container styling to match the live attendance graph */
+.chart-container {
+    width: 400px; /* Set width to 400px */
+    height: 400px; /* Set height to maintain aspect ratio */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Ensure responsive design for smaller screens */
+@media (max-width: 600px) {
+    .chart-container {
+        width: 300px; /* Adjust width for smaller screens */
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}

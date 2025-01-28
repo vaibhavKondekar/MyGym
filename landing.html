@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>MyGym</title>
+    
+    <script>
+      function fadeOutAndRedirect(url) {
+          document.body.classList.add('fade');
+          setTimeout(() => {
+              window.location.href = url;
+          }, 50); // Match this duration with the CSS transition
+      }
+  </script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__logo">
+        <a href="#"><img src="assets/logo.png" alt="logo" /></a>
+      </div>
+      <ul class="nav__links">
+        
+        <!-- <li class="link"><a href="#">Program</a></li> -->
+         
+         <li class="link"><a href="#">Home</a></li>
+        <li class="link"><a href="#">Service</a></li>
+        <li class="link"><a href="#">About</a></li>
+        <li class="link"><a href="#">Plans</a></li>
+        
+      </ul>
+      <a href="#" onclick="fadeOutAndRedirect('Login.html'); return false;">
+        <button class="btn">Login Now</button>
+      </a>
+    
+    </nav>
+
+    <header class="section__container header__container">
+      <div class="header__content">
+        <span class="bg__blur"></span>
+        <span class="bg__blur header__blur"></span>
+        <h4>BEST GYM MANAGEMENT TOOL </h4>
+        <h1>MAKE YOUR  <span>MANAGEMENT</span>  EASY</h1>
+        <p>
+         Effortlessly manage your gym with our all-in-one platform. From tracking member attendance 
+         to managaging their membership and monitoring gym atmosphere, our intuitive tools simplify your daily operations.
+          Stay focused on what matters most—providing a top-notch experience for your members and growing 
+          your fitness community.
+        </p>
+        <button class="btn" onclick="fadeOutAndRedirect('Login.html'); return false;">Get Started</button>
+      </div>
+       <div class="header__image">
+        <img src="assets/gym.png" alt="header" />
+      </div> 
+    </header>
+
+    <section class="section__container explore__container">
+      <div class="explore__header">
+        <h2 class="section__header">Our Services</h2>
+        <div class="explore__nav">
+          <span><i class="ri-arrow-left-line"></i></span>
+          <span><i class="ri-arrow-right-line"></i></span>
+        </div>
+      </div>
+      <div class="explore__grid">
+        <div class="explore__card">
+          <span><i class="ri-boxing-fill"></i></span>
+          <h4>Membership</h4>
+          <p>
+            Embrace the essence of strength as we delve into its various
+            dimensions physical, mental, and emotional.
+          </p>
+          <a href="#" onclick="fadeOutAndRedirect('Login.html'); return false;">Join Now <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="explore__card">
+          <span><i class="ri-heart-pulse-fill"></i></span>
+          <h4>Live Crowd</h4>
+          <p>
+            It encompasses a range of activities that improve health, strength,
+            flexibility, and overall well-being.
+          </p>
+          <a href="#" onclick="fadeOutAndRedirect('Login.html'); return false;">Join Now <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="explore__card">
+          <span><i class="ri-run-line"></i></span>
+          <h4>Gym atmosphere</h4>
+          <p>
+            Through a combination of workout routines and expert guidance, we'll
+            empower you to reach your goals.
+          </p>
+          <a href="#" onclick="fadeOutAndRedirect('Login.html'); return false;">Join Now <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="explore__card">
+          <span><i class="ri-shopping-basket-fill"></i></span>
+          <h4>Attendance Tracking</h4>
+          <p>
+            Designed for individuals, our program offers an effective approach
+            to gaining weight in a sustainable manner.
+          </p>
+          <a href="#" onclick="fadeOutAndRedirect('Login.html'); return false;">Join Now <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="section__container class__container">
+      <div class="class__image">
+        <span class="bg__blur"></span>
+        <img src="assets/class-1.jpg" alt="class" class="class__img-1" />
+        <img src="assets/class-2.jpg" alt="class" class="class__img-2" />
+      </div>
+      <div class="class__content">
+        <h2 class="section__header">THE CLASS YOU WILL GET HERE</h2>
+        <p>
+          Led by our team of expert and motivational instructors, "The Class You
+          Will Get Here" is a high-energy, results-driven session that combines
+          a perfect blend of cardio, strength training, and functional
+          exercises. Each class is carefully curated to keep you engaged and
+          challenged, ensuring you never hit a plateau in your fitness
+          endeavors.
+        </p>
+        <button class="btn">Book A Class</button>
+      </div>
+    </section> -->
+
+    <section class="section__container join__container">
+      <h2 class="section__header">WHY  CHOOSE US ?</h2>
+      <p class="section__subheader">
+      
+
+Our comprehensive platform fosters a seamless and efficient management experience, 
+empowering you to focus on building a thriving gym community. With intuitive tools and robust support,
+ we help you streamline operations, enhance member satisfaction, and drive growth.
+      </p>
+      <div class="join__image">
+        <img src="assets/join.jpg" alt="Join" />
+        <div class="join__grid">
+          <div class="join__card">
+            <span><i class="ri-user-star-fill"></i></span>
+            <div class="join__card__content">
+              <h4>User-Friendly Interface</h4>
+              <p>Navigate with ease using our intuitive platform designed for simplicity and efficiency.</p>
+            </div>
+          </div>
+          <div class="join__card">
+            <span><i class="ri-vidicon-fill"></i></span>
+            <div class="join__card__content">
+              <h4>Real-Time Monitoring</h4>
+              <p> Keep track of your gym’s activities with live updates and insights, all at your fingertips.</p>
+            </div>
+          </div>
+          <div class="join__card">
+            <span><i class="ri-building-line"></i></span>
+            <div class="join__card__content">
+              <h4>Reliable Support</h4>
+              <p>Our dedicated team is always available to ensure your gym runs smoothly and efficiently.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container price__container">
+      <h2 class="section__header">OUR PRICING PLAN</h2>
+      <p class="section__subheader">
+       
+
+
+        "Our pricing plan offers flexible tiers, each designed to meet the unique 
+        needs of your gym and streamline your management operations."
+      </p>
+      <div class="price__grid">
+        <div class="price__card">
+          <div class="price__card__content">
+            <h4>Weekly Plan</h4>
+            <h3>199₹</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Member Management Feature
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Attendance Records
+            </p>
+          </div>
+          <button class="btn price__btn">Join Now</button>
+        </div>
+        <div class="price__card">
+          <div class="price__card__content">
+            <h4>Monthly Plan</h4>
+            <h3>499₹</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Real-Time Attendance Monitoring
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Attendance Records
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Member Management Feature
+            </p>
+          </div>
+          <button class="btn price__btn">Join Now</button>
+        </div>
+        <div class="price__card">
+          <div class="price__card__content">
+            <h4>Yearly Plan</h4>
+            <h3>5000₹</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Gym Atmosphere Monitoring
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Health Report Monitoring
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Real-Time Attendance Monitoring
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Attendance Records
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Member Management Feature
+            </p>
+          </div>
+          <button class="btn price__btn">Join Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="review">
+      <div class="section__container review__container">
+        <span><i class="ri-double-quotes-r"></i></span>
+        <div class="review__content">
+          <h4>USER REVIEW</h4>
+          <p>
+            
+
+"What truly sets this gym management platform apart is the outstanding customer support team. 
+They are knowledgeable, responsive, and genuinely committed to helping gym owners succeed. 
+The team takes the time to understand individual business needs, 
+offering personalized solutions that ensure smooth operations and growth."
+          </p>
+          <div class="review__rating">
+            <span><i class="ri-star-fill"></i></span>
+            <span><i class="ri-star-fill"></i></span>
+            <span><i class="ri-star-fill"></i></span>
+            <span><i class="ri-star-fill"></i></span>
+            <span><i class="ri-star-half-fill"></i></span>
+          </div>
+          <div class="review__footer">
+            <div class="review__member">
+              <img src="assets/member.jpg" alt="member" />
+              <div class="review__member__details">
+                <h4>Pradeep Jadhav</h4>
+                <p>FITZONE OWNER</p>
+              </div>
+            </div>
+            <div class="review__nav">
+              <span><i class="ri-arrow-left-line"></i></span>
+              <span><i class="ri-arrow-right-line"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section__container footer__container">
+      <span class="bg__blur"></span>
+      <span class="bg__blur footer__blur"></span>
+      <div class="footer__col">
+        <div class="footer__logo"><img src="assets/logo.png" alt="logo" /></div>
+        <p>
+          Take the first step towards a healthier, stronger you with our
+          unbeatable pricing plans. Let's sweat, achieve, and conquer together!
+        </p>
+        <div class="footer__socials">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-instagram-line"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="#">Business</a>
+        <a href="#">Franchise</a>
+        <a href="#">Partnership</a>
+        <a href="#">Network</a>
+      </div>
+      <div class="footer__col">
+        <h4>About Us</h4>
+        <a href="#">Blogs</a>
+        <a href="#">Security</a>
+        <a href="#">Careers</a>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">BMI Calculator</a>
+      </div>
+    </footer>
+    <div class="footer__bar">
+      Copyright © 2023 Web Design Mastery. All rights reserved.
+    </div>
+    
+  </body>
+</html>

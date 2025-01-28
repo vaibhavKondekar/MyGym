@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Atmosphere</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Ensure Chart.js is loaded -->
+    <style>
+        canvas {
+            border: 1px solid black; /* Add border to see the canvas */
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Gym Atmosphere</h2>
+        <p>Gym atmosphere information will be displayed here.</p>
+        <div>
+            <h3>Oxygen Level</h3>
+            <canvas id="oxygenPieChart"></canvas>
+        </div>
+        <div>
+            <h3>CO2 Level</h3>
+            <canvas id="co2PieChart"></canvas>
+        </div>
+        <div>
+            <h3>Humidity Level</h3>
+            <canvas id="humidityPieChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Static data for testing
+        const staticData = {
+            oxygenLevel: 25,
+            co2Level: 0.04,
+            humidityLevel: 50
+        };
+
+        // Function to update pie charts with static data
+        function updateCharts(data) {
+            const oxygenLevel = data.oxygenLevel;
+            const co2Level = data.co2Level * 100; // Convert to percentage
+            const humidityLevel = data.humidityLevel;
+
+            updatePieChart('oxygenPieChart', oxygenLevel, 100 - oxygenLevel);
+            updatePieChart('co2PieChart', co2Level, 100 - co2Level);
+            updatePieChart('humidityPieChart', humidityLevel, 100 - humidityLevel);
+        }
+
+        // Function to update a pie chart
+        function updatePieChart(chartId, value1, value2) {
+            const ctx = document.getElementById(chartId).getContext('2d');
+            const pieChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Level', 'Remaining'],
+                    datasets: [{
+                        data: [value1, value2],
+                        backgroundColor: ['green', 'gray'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                }
+            });
+        }
+
+        // Call the function with static data when the page loads
+        window.onload = function() {
+            updateCharts(staticData);
+        };
+    </script>
+</body>
+
+</html>

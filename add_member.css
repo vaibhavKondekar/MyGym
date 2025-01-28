@@ -1,0 +1,90 @@
+        /* Add fade effect CSS */
+        body.fade {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Prevent scrollbar */
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Change from flex-start to center */
+            padding: 20px 0;
+            box-sizing: border-box;
+            margin: 0;
+            background-color: #111317; /* Primary background */
+            color: #d1d5db; /* Light text color */
+            overflow: hidden; /* Disable scrolling */
+        }
+
+        /* Increase card size for add member form */
+        .section__container {
+            max-width: 850px;  /* Increased from 900px */
+            width: 95%;  /* Increased from 90% */
+            padding: 20px; /* Reduced padding from 40px */
+            margin: auto;
+            background-color: #1f2125; /* Primary light background */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Center the "Add Member" header */
+        .section__header {
+            text-align: center;
+            color: #f9ac54; /* Secondary color for the heading */
+        }
+
+        /* Adjust form layout for better spacing */
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px; /* Reduced gap for more compact form */
+        }
+
+        /* Full width for some inputs */
+        #fullName, #email, #healthIssues, .btn {
+            grid-column: 1 / -1;
+        }
+
+        /* Adjust input styles */
+        input, select, textarea {
+            width: 100%;
+            padding: 10px; /* Reduced padding */
+            margin-top: 3px; /* Reduced margin */
+            box-sizing: border-box;
+            background-color: #35373b; /* Extra light background */
+            border: 1px solid #d1d5db; /* Light border */
+            color: #d1d5db; /* Light text color */
+            border-radius: 5px;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #f9ac54; /* Secondary color */
+            box-shadow: 0 0 5px #f9ac54;
+        }
+
+        /* Increase button size */
+        .btn {
+            margin-top: 15px; /* Reduced margin */
+            padding: 10px; /* Reduced padding */
+            font-size: 1em; /* Slightly reduced font size */
+            background-color: #f9ac54; /* Secondary color */
+            color: #ffffff; /* White text */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #d79447; /* Darker secondary color */
+        }
+
+        /* Add some spacing for labels */
+        label {
+            display: block;
+            margin-bottom: 3px; /* Reduced margin */
+            color: #d1d5db; /* Light text color */
+        }

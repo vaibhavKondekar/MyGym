@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+    --primary-color: #111317; /* Background */
+    --primary-color-light: #1f2125; /* Sidebar background */
+    --primary-color-extra-light: #35373b; /* Menu background on hover */
+    --secondary-color: #f9ac54; /* Accent color */
+    --secondary-color-dark: #d79447; /* Accent hover color */
+    --text-light: #d1d5db; /* Light text */
+    --white: #ffffff; /* White color */
+    --highlight-color: #f9ac54; /* Yellow color for active menu */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#members {
+    position: relative;
+}
+
+.add-member-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.add-member-btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.send-reminder-btn {
+    background-color: var(--highlight-color); /* Yellow color */
+    color: var(--primary-color); /* Text color */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-reminder-btn:hover {
+    background-color: var(--secondary-color-dark); /* Darker yellow on hover */
+}
+
+.send-reminder-btn {
+    background-color: var(--highlight-color); /* Yellow color */
+    color: var(--primary-color); /* Text color */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-reminder-btn:hover {
+    background-color: var(--secondary-color-dark); /* Darker yellow on hover */
+}
+
+/* Add this to your main_styles.css */
+
+/* Add New Member Button Styling */
+.add-member-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.add-member-btn:hover {
+    background-color: var(--secondary-color-dark);
+}
+
+/* Sidebar Logout Styling */
+.sidebar__logout {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar__logout a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.sidebar__logout a:hover {
+    color: var(--secondary-color);
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color); /* Match background */
+    color: var(--text-light);
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* General container styling */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    background-color: var(--primary-color-light);
+    padding: 20px;
+    color: var(--text-light);
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar__header {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.sidebar__menu {
+    list-style: none;
+    padding-left: 0;
+    cursor: pointer;
+}
+
+.menu__item {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.menu__item a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.menu__item a:hover {
+    background-color: var(--primary-color-extra-light); /* On hover */
+}
+
+/* Active state for menu item */
+.menu__item.active a {
+    background-color: var(--highlight-color); /* Yellow background for active item */
+    font-weight: 600;
+    color: var(--white);
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 270px; /* Sidebar offset */
+    padding: 20px;
+    width: calc(100% - 270px);
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color-dark);
+    padding: 15px 20px;
+    color: var(--white);
+}
+
+.header h1 {
+    font-size: 26px;
+}
+
+.nav__menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav__menu li {
+    margin-left: 20px;
+}
+
+.nav__menu li a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.nav__menu li a:hover {
+    color: var(--secondary-color);
+}
+
+.atmosphere-charts {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.chart-container {
+    width: 30%;
+    text-align: center;
+    background-color: var(--primary-color-light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container p {
+    margin-top: 10px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+.status {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.green {
+    color: green;
+}
+
+.orange {
+    color: orange;
+}
+
+.normal {
+    color: black; /* Default color when levels are normal */
+}
+
+
+/* Hide sections by default */
+section {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Active section will be displayed */
+section.active {
+    display: block;
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #f9ac54;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.card p {
+    font-size: 18px;
+    color: #111317;
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.card a:hover {
+    color: var(--secondary-color-dark);
+}
+
+/* Attendance and Members Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid var(--primary-color-extra-light);
+    padding: 12px;
+    text-align: left;
+    color: var(--white);
+}
+
+table th {
+    background-color: var(--primary-color-extra-light);
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: var(--primary-color-light);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--primary-color-extra-light);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--primary-color-dark);
+    color: var(--text-light);
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 210px;
+        width: calc(100% - 210px);
+    }
+
+    .dashboard-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Add Member Form Styles */
+#add-member-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--primary-color-light);
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-light);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--primary-color-extra-light);
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.submit-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color-dark);
+}
+
+/* Add these styles at the end of your main_styles.css file */
+
+/* Add Member Form Styles */
+#add-member-form-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--primary-color-light);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#add-member-form-container h3 {
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-light);
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--primary-color-extra-light);
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-size: 16px;
+}
+
+.submit-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color-dark);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    #add-member-form-container {
+        width: 90%;
+    }
+}

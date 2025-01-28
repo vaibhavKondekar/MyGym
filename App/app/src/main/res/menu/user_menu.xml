@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+
+
+
+
+    <item
+        android:id="@+id/bottom_liveattendance"
+        android:title="Live Attendance"
+        android:icon="@drawable/baseline_checklist_24"/>
+
+    <item
+        android:id="@+id/bottom_healthreport"
+        android:title="Health Report"
+        android:icon="@drawable/baseline_text_snippet_24"/>
+
+
+    <item
+        android:id="@+id/bottom_weighttracker"
+        android:title="Weight Tracker"
+        android:icon="@drawable/baseline_fitness_center_24"/>
+
+    <item
+        android:id="@+id/bottom_atmosphere"
+        android:title="Atmosphere"
+        android:icon="@drawable/baseline_chat_24"/>
+
+</menu>

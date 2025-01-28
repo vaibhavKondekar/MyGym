@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+
+
+
+
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:text="@string/app_name"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold" />-->
+
+
+    <TextView
+        android:id="@+id/textDashboardTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/textPresentDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Present Date: "
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/textTotalMembers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Total Members: "
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/textExpiryToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Expiry Today: "
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/textExpiryNext3Days"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:text="Expiry in Next 3 Days: "-->
+<!--        android:textSize="18sp"-->
+<!--        android:textColor="@color/black"/>-->
+
+    <TextView
+        android:id="@+id/textExpired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Expired:"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioExpirySoon"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Expiring in next 3 days"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textColor="@color/black"/>-->
+
+        <RadioButton
+            android:id="@+id/radioExpiringToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expiring Today"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/radioExpired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expired"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnShowList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Show List"
+        android:textSize="18sp"
+        android:backgroundTint="@color/my_primary"
+        android:textColor="@color/white"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

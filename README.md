@@ -29,13 +29,11 @@
 
 ## 🔧 Tech Stack
 ### Frontend
-- **Web**: React.js, HTML5, CSS3, JavaScript
+- **Web**: HTML5, CSS3, JavaScript
 - **Mobile**: Java (Android)
 
 ### Backend
 - **Firebase**: Real-time database, authentication, and cloud functions.
 
----
 
-## 📂 Project Structure
 
